@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+My Baby Book
+{% endblock %}
+
+{% block content %}
+
+
+    <h1>My Baby Book</h1>
+
+    {% for entry in object_list %}
+
+        {% if user == entry.user %}
+            <hr>
+            <div class="main_content">
+                <h2>{{entry.title}}</h2>
+                <small>{{entry.post_date}}</small>
+                <small><a href="{% url 'edit_post' entry.pk %}">(Edit Post)</a> </small>
+            </div>
+            {% if entry.main_image %}
+                <div class="image_text_wrapper">
+                    <div class="image_wrapper scroll-appear">
+                        <img src="{{entry.main_image.url}}">
+                    </div>
+                    <div class="text_wrapper">
+                        {{entry.entry|safe}}
+                    </div>
+                </div>
+
+            {% else %}
+                {{entry.entry|safe}}
+            {% endif %}
+
+            <div style="clear:both"></div>
+
+
+        {% endif %}
+
+    {% endfor %}
+
+
+
+
+{% endblock %}
