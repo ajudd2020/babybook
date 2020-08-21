@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+.main {
+    padding: 10px 50px 10px 50px;
+}
+
+h1 {
+    color: blue
+}
+
+.main_content {
+    text-align: center;
+}
+
+
+.image_wrapper {
+    float: left;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #DCDCDC;
+    box-shadow: 10px 10px 8px #888888;
+    width: 25%;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                opacity .6s .10s ease-in;
+    will-change: tranform, opactiy;
+}
+
+.image_text_wrapper {
+    height: auto;
+}
+
+img {
+    margin-top: 15px;
+    margin-bottom: 60px;
+    width: 90%;
+    border: 1px #808080 solid;
+
+}
+
+.scroll-appear.visible {
+    opacity: 1;
+    transform: translateY(0px);
+    transform: rotate(-5deg)
+}
+

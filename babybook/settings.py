@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'w&d0dgn0ws(&+w+$2to^0av8g3iazi#ejb-cy9#z9t0trhr#w+'
+SECRET_KEY = 'a!ip)%lg^r%g15+fe6vjx9vneay-0bw0o8enm++tt2er6wgl5#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'main',
+    'users',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -118,3 +122,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+
+CRISPY_TEMPLATE_PACK='bootstrap4'
+LOGIN_REDIRECT_URL = "/view_book/"
+LOGOUT_REDIRECT_URL = "/"
+
