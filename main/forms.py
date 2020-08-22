@@ -4,5 +4,5 @@ from .models import BabyBookEntry
 class CreateEntryForm(forms.ModelForm):
     class Meta:
         model = BabyBookEntry
-        fields = ['title', 'entry', 'main_image']
+        fields = ['title', 'entry', 'main_image', 'image_caption']
 

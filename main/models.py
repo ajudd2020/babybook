@@ -14,6 +14,7 @@ class BabyBookEntry (models.Model):
     entry = RichTextField(blank=True, null=True, max_length=2000)
     #entry = models.TextField()
     post_date = models.DateTimeField(auto_now_add=True)
+    image_caption = models.CharField(max_length=30, null=True, blank=True)
 
     def __str__(self):
         return self.title

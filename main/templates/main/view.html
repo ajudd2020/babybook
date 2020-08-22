@@ -23,14 +23,24 @@ My Baby Book
                 <div class="image_text_wrapper">
                     <div class="image_wrapper scroll-appear">
                         <img src="{{entry.main_image.url}}">
+                        <div class="image_caption">
+                            {% if entry.image_caption %}
+                                <p>{{entry.image_caption}}</p>
+                            {% else %}
+                                <p></p>
+                                <p></p>
+                            {% endif %}
+                        </div>
                     </div>
-                    <div class="text_wrapper">
+                    <div class="entry_wrapper">
                         {{entry.entry|safe}}
                     </div>
                 </div>
 
             {% else %}
-                {{entry.entry|safe}}
+                <div class="entry_wrapper">
+                    {{entry.entry|safe}}
+                </div>
             {% endif %}
 
             <div style="clear:both"></div>

@@ -16,7 +16,7 @@ def about (response):
 
 class CreateEntryView(LoginRequiredMixin, CreateView):
     model = BabyBookEntry
-    fields = ['title', 'entry', 'main_image']
+    fields = ['title', 'entry', 'main_image', 'image_caption']
     template_name = 'main/entry.html'
 
     def form_valid(self, form):
