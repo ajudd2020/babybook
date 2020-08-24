@@ -11,7 +11,7 @@ class BabyBookEntry (models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length= 200)
     main_image = models.ImageField(null=True, blank=True, upload_to="images/")
-    entry = RichTextField(blank=True, null=True, max_length=2000)
+    entry = RichTextField(blank=True, null=True, max_length=5000)
     #entry = models.TextField()
     post_date = models.DateTimeField(auto_now_add=True)
     image_caption = models.CharField(max_length=30, null=True, blank=True)

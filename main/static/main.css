@@ -22,6 +22,10 @@ a:hover {
     padding-top: 20px;
 }
 
+.no_image_entry_wrapper {
+    padding: 20px 40px;
+}
+
 .main_content {
     text-align: center;
 }

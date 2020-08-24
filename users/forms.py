@@ -23,7 +23,6 @@ class CustomUserForm (forms.Form):
     password2 = forms.CharField(widget=forms.PasswordInput)
 
     def clean_email(self):
-        print("email")
         email = self.cleaned_data['email'].lower()
         r = User.objects.filter(email=email)
         if r.count():
