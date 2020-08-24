@@ -14,6 +14,10 @@ a {
     color: #F79862;
 }
 
+a:hover {
+    color: #3CAEA3;
+}
+
 .about_text {
     padding-top: 20px;
 }
@@ -39,6 +43,7 @@ a {
 }
 
 .image_text_wrapper {
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
