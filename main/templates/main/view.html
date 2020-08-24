@@ -25,9 +25,8 @@ My Baby Book
                         <img src="{{entry.main_image.url}}">
                         <div class="image_caption">
                             {% if entry.image_caption %}
-                                <p>{{entry.image_caption}}</p>
+                                {{entry.image_caption}}
                             {% else %}
-                                <p></p>
                                 <p></p>
                             {% endif %}
                         </div>
@@ -43,7 +42,8 @@ My Baby Book
                 </div>
             {% endif %}
 
-            <div style="clear:both"></div>
+        
+        <div style="clear:both"></div>
 
 
         {% endif %}

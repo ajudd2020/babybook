@@ -6,8 +6,7 @@
 }
 
 h1 {
-    /*color: #3CAEA3;*/
-    color: red;
+    color: #3CAEA3;
 }
 
 .main_content {
@@ -48,6 +47,8 @@ img {
     margin-bottom: 10%;
     font-size: .5em;
     font-family: cursive;
+    text-align: center;
+    padding: 2px;
 }
 
 .scroll-appear.visible {
