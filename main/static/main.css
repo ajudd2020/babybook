@@ -6,7 +6,16 @@
 }
 
 h1 {
+    padding-top: 15px;
     color: #3CAEA3;
+}
+
+a {
+    color: #F79862;
+}
+
+.about_text {
+    padding-top: 20px;
 }
 
 .main_content {

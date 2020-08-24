@@ -4,9 +4,16 @@
 
 {% block content %}
     <h1>What is BabyBook?</h1>
-    <p>
-        As a mom I have over 17,000 pictures on my phone (no lie). What I need more than anything else is a place to keep them. Not all of them. I have my phone for that. What I need is a place to keep the special ones. The ones I don't want to get lost in the mix. The ones I don't want to scroll for an hour to find. The ones that define my baby's life.
-    </p>
-    <p>Enter: BabyBook</p>
-    <p>With BabyBook, you can upload one picture at a time (yes, just one... becuase we all know we would upload all of them if we could) and document what that picurue means to you and your baby. "Your first steps." "Your first day at (home)school." "Your first mask." "Your first pandemic?" There is so much to document (especially these days!). Don't let your pictures pile up on your phone. Start documenting those memorable moments now with BabyBook!</p>
+    <div class="about_text">
+        <p>
+            As a mom I have over 17,000 pictures on my phone (no lie). What I need more than anything else is a place to keep them. Not all of them. I have my phone for that. What I need is a place to keep the special ones. The ones I don't want to get lost in the mix. The ones I don't want to scroll for an hour to find. The ones that define my baby's life.
+        </p>
+        <p>Enter: BabyBook</p>
+        <p>
+            With BabyBook, you can upload one picture at a time (yes, just one... becuase we all know we would upload all of them if we could) and document what that picture means to you and your baby. "Your first steps." "Your first pandemic." There is so much to document (especially these days!). Don't let your pictures pile up on your phone. Start documenting those memorable moments now with BabyBook!
+        </p>
+    </div>
+    
+
+    <h5>Get Started <a href="{% url 'register' %}">HERE</a>. Already have an account? Log in <a href="{% url 'login' %}">HERE</a>.</h5> 
 {% endblock %}
