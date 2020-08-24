@@ -9,15 +9,16 @@ My Baby Book
 
 
     <h1>My Baby Book</h1>
+    <h4>To add an entry go to <a href="{% url 'add_entry'%}">Post</a></h4>
 
     {% for entry in object_list %}
-
         {% if user == entry.user %}
             <hr>
             <div class="main_content">
                 <h2>{{entry.title}}</h2>
                 <small>{{entry.post_date}}</small>
-                <small><a href="{% url 'edit_post' entry.pk %}">(Edit Post)</a> </small>
+                <small><a href="{% url 'edit_entry' entry.pk %}">(Edit Post)</a> </small>
+                <small><a href="{% url 'delete_entry' entry.pk %}">(Delete Post)</a> </small>
             </div>
             {% if entry.main_image %}
                 <div class="image_text_wrapper">
@@ -41,16 +42,11 @@ My Baby Book
                     {{entry.entry|safe}}
                 </div>
             {% endif %}
-
         
-        <div style="clear:both"></div>
-
+            <div style="clear:both"></div>
 
         {% endif %}
 
     {% endfor %}
-
-
-
 
 {% endblock %}

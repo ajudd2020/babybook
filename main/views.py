@@ -5,6 +5,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import BabyBookEntry
 from .forms import CreateEntryForm
+from django.urls import reverse_lazy
 
 
 # Create your views here.
@@ -28,11 +29,18 @@ class EntryListView(ListView):
     template_name='main/view.html'
     ordering = ['-post_date']
 
-class EditPostView(UpdateView):
+class EditEntryView(UpdateView):
     model = BabyBookEntry
     form_class = CreateEntryForm
     template_name = 'main/edit_post.html'
 
+class DeleteEntryView(DeleteView):
+    model = BabyBookEntry
+    template_name = "main/delete_entry.html"
+    success_url=reverse_lazy('view_book')
+
+'''
 def index(response):
     user_entry = BabyBookEntry.objects.all
     print(user_entry)
+'''
