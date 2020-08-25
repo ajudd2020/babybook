@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-from .secrets import *
 import django_heroku
 
 
@@ -28,8 +27,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1']
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET_KEY
-
+SECRET_KEY = 'a!ip)%lg^r%g15+fe6vjx9vneay-0bw0o8enm++tt2er6wgl5#'
 
 # Application definition
 
