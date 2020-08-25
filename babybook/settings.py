@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 from .secrets import *
+import django-heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -140,3 +142,5 @@ CRISPY_TEMPLATE_PACK='bootstrap4'
 LOGIN_REDIRECT_URL = "/view_book/"
 LOGOUT_REDIRECT_URL = "/"
 
+# Activate Django-Heroku.
+django_heroku.settings(locals())
